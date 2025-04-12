@@ -24,7 +24,7 @@ data "aws_vpc" "main" {
   default = true
 }
 resource "aws_key_pair" "key" {
-  key_name   = "mykey"
+  key_name   = "mykey1"
   public_key = file("./aws.pub")
 }
 resource "aws_instance" "main" {
