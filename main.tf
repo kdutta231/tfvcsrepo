@@ -6,7 +6,7 @@ terraform {
     }
   }
 }
-
+/*
 provider "aws" {
   region = "us-west-1"
 }
@@ -85,3 +85,4 @@ output "public_ip" {
   value = aws_instance.main.public_ip
 }
 
+*/
