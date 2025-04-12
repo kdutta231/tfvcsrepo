@@ -1,11 +1,4 @@
 terraform {
-  cloud {
-    organization = "duttakunal231-org"
-
-    workspaces {
-      name = "kduttalab"
-    }
-  }
   required_providers {
     aws = {
       source  = "hashicorp/aws"
