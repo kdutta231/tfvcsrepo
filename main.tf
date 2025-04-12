@@ -35,24 +35,6 @@ resource "aws_instance" "main" {
   provisioner "local-exec" {
     command = "echo ${self.public_ip} >> public.ip"
   }
-  /*
-  provisioner "file" {
-    source = "./public.ip.txt"
-    destination = "/home/ubuntu"
-  }*/
-
-  provisioner "remote-exec" {
-    inline = [
-      "mkdir /home/ubuntu/kunal",
-      "echo 'Hello World' >> /home/ubuntu/kunal/abc.txt"
-    ]
-  }
-  connection {
-    type        = "ssh"
-    user        = "ubuntu"
-    private_key = file("./aws")
-    host        = self.public_ip
-  }
 }
 locals {
   allowed_ports = {
