@@ -9,7 +9,6 @@ terraform {
 provider "aws" {
   region = "us-west-1"
 }
-/*
 data "aws_ami" "this" {
   most_recent = true
   owners      = ["099720109477"]
@@ -83,5 +82,5 @@ resource "aws_security_group_rule" "main1" {
 output "public_ip" {
   value = aws_instance.main.public_ip
 }
-*/
+
 
